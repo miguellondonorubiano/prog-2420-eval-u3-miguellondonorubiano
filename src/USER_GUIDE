@@ -1,0 +1,11 @@
+Al iniciar el programa, al usuario se le da la bienvenida con el mensaje “Bienvenido a Almuerzos Dora UPB”.
+Al presionar "Enter", se muestra el estado actual de las mesas del restaurante:siendo ocupadas (en rojo) o libres (en verde).
+El usuario puede seleccionar una mesa escribiendo en la consola un número del 1 al 5.
+Habiendo seleccionado la mesa, podrá realizar las siguientes acciones
+-Asignar platos: El usuario podra elegir platos o bebidas del menú (opciones ya predefinidas), indicando el número de referencia asociado a cada artículo.
+Los artículos seleccionados se agregan a la mesa, que ademas se marcará como ocupada.
+-Mostrar cuenta total: Esta opción permite ver la suma total de los precios de los platos y bebidas pedidos por la mesa seleccionada.
+En otras palabras el total a pagar.
+-Mostrar platos pedidos: En esta parte sistema muestra una lista de los artículos que han sido pedidos por la mesa.
+-Volver al menú de mesas: Regresa al menú principal donde se pueden seleccionar otras mesas.
+El usuario puede continuar gestionando las mesas hasta que decida salir ingresando "0" en cualquier momento.
