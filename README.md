@@ -6,7 +6,7 @@ Nombre: Miguel Angel londono Rubiano
 ID:  000421385
 ---
 # Organización de clientes Y almuerzos en un restaurante.
-
+# Descripcion 
 ## Problema a solucionar:
 Para un restaurante es de vital importancia mantener una correcta organización en los clientes, pedidos, platos y costos en cada orden, por esto se realizará un programa en el cual se puedan ordenar todos estos datos bajo una estructura sencilla, que le permita al usuario/trabajador facilitar su labor y que para él sea más sencillo saber que a que mesa le pertenece cada orden, que alimentos contiene cada orden y el costo total del servicio, visualizando todo esto en el programa. 
 # Utilidad del programa:
@@ -24,3 +24,54 @@ Cubre una situación cotidiana, en la que los menús y las mesas ya están defin
 
 # Estructuras de Datos Utilizadas:
 para realizar el programa se utilizaron distintas metodologias y estructuras vistas en clase ,emplenado lo que es una lista de listas (en la parte de las mesas) para representar las mesas del restaurante,que como tal desee que fueran cinco mesas, donde cada elemento indica si una mesa está disponible (0) u ocupada (1). tambien, se usaron diccionarios para guardar el menú de platos y bebidas junto con sus precios. El diccionario de pedidos funciona asociando cada mesa con una lista que contiene los platos y bebidas ordenados por la mesa seleccionada .Esto nos permite llevar un registro de los artículos seleccionados y calcular el total de la cuenta de cada mesa.
+
+# Pseudocódigo:
+    INICIAR programa
+
+    MOSTRAR mensaje "Bienvenido a Almuerzos Dora UPB"
+    ESPERAR a que el usuario presione "Enter" para continuar
+
+    MIENTRAS el programa esté activo:
+        MOSTRAR estado de las mesas (🟩 si está disponible, 🟥 si está ocupada)
+        
+        SOLICITAR al usuario que seleccione una mesa (1 a 5) o salir (0)
+        
+        SI el usuario selecciona una mesa válida (1-5):
+            MIENTRAS la mesa esté activa:
+                MOSTRAR opciones de la mesa seleccionada:
+                    1. Asignar platos
+                    2. Mostrar cuenta total
+                    3. Mostrar platos pedidos
+                    4. Volver al menú de selección de mesas
+                    
+                SOLICITAR al usuario seleccionar una opción:
+                
+                SI la opción es "1" (Asignar platos):
+                    MOSTRAR menú de platos y bebidas con sus precios
+                    MIENTRAS el usuario no seleccione "0" (salir):
+                        SOLICITAR al usuario seleccionar un plato/bebida por número de referencia
+                        SI el plato/bebida es válido:
+                            AGREGAR plato/bebida seleccionado a los pedidos de la mesa
+                            MARCAR mesa como ocupada (🟥)
+                        SI el plato/bebida es "0":
+                            SALIR de la selección de platos
+                        SI el plato/bebida no es válido:
+                            MOSTRAR "Plato no válido"
+                            
+                SI la opción es "2" (Mostrar cuenta total):
+                    CALCULAR suma total de los precios de los platos y bebidas de la mesa
+                    MOSTRAR "Cuenta total de la mesa {número de mesa}: {total}"
+                
+                SI la opción es "3" (Mostrar platos pedidos):
+                    SI hay platos pedidos en la mesa:
+                        MOSTRAR lista de platos pedidos
+                    SI no hay platos pedidos:
+                        MOSTRAR "La mesa {número de mesa} no tiene pedidos."
+                        
+                SI la opción es "4" (Volver al menú de mesas):
+                    SALIR del menú de la mesa actual y VOLVER a mostrar las mesas
+                    
+        SI el usuario selecciona "0" (salir):
+            TERMINAR el programa
+
+    FIN del programa
